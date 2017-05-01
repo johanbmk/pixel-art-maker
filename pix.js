@@ -6,6 +6,9 @@ window.onload = function() {
     for (let col = 0; col < 2; col++) {
       let pixel = document.createElement('div');
       pixel.className = 'pixel';
+      pixel.addEventListener('click', event => {
+        pixel.style.backgroundColor = 'red';
+      });
       grid.append(pixel);
     }
   }
