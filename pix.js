@@ -25,10 +25,25 @@ window.onload = function() {
     let colorSource = document.createElement('div');
     colorSource.className = 'colorSource';
     colorSource.style.backgroundColor = color;
+    if (color === 'white') {
+      colorSource.style.border = '1px solid black';
+    }
     colorSource.addEventListener('click', event => {
       selectedColor = colorSource.style.backgroundColor;
+      colorIndicator.style.backgroundColor = selectedColor;
     });
     palette.append(colorSource);
   }
+
+  let colorIndicatorLabel = document.createElement('div');
+  colorIndicatorLabel.id = 'colorIndicatorLabel';
+  colorIndicatorLabel.innerText = "Current color: ";
+  palette.append(colorIndicatorLabel);
+
+  let colorIndicator = document.createElement('div');
+  colorIndicator.id = 'colorIndicator';
+  colorIndicator.style.backgroundColor = selectedColor;
+  palette.append(colorIndicator);
+
   document.body.append(palette);
 }
