@@ -5,8 +5,8 @@ window.onload = function() {
   // Drawing grid
   let grid = document.createElement('div');
   grid.id = 'grid';
-  for (let row = 0; row < 2; row++) {
-    for (let col = 0; col < 2; col++) {
+  for (let row = 0; row < 40; row++) {
+    for (let col = 0; col < 60; col++) {
       let pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.addEventListener('click', event => {
