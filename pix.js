@@ -1,5 +1,6 @@
 window.onload = function() {
-  let colors = ['red', 'blue'];
+  let colors = ['red', 'orange', 'yellow', 'green', 'blue',
+    'purple', 'brown', 'gray', 'black', 'white'];
   let selectedColor = colors[0];
 
   // Drawing grid
